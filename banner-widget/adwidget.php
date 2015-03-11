@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Banner Widget
-* Version:     2.0.11
+* Version:     2.1.0
 * Description: The easiest way to place ads in your Wordpress sidebar. Version 2.0 is a complete rewrite of the plugin
 * Author:      FOS WP Team
 * Author URI:  vortex.1stonlinesolutions.com/dev/WPU/
@@ -272,7 +272,7 @@ function deals_link_shortcode( $atts, $content = null ) {
     } 
     $url .= '?offer_id=' . $deal_atts['id'];
 
-    return '<a href="' . $url . '" ' . $deal_atts['target'] . ' title="' . $banner->post_title . '">' . $content . '</a>';
+    return '<a class="fos-deal" href="' . $url . '" ' . $deal_atts['target'] . ' title="' . $banner->post_title . '">' . $content . '</a>';
 
 }
 add_shortcode( 'deals_link', 'deals_link_shortcode' );
