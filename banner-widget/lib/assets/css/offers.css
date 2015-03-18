@@ -1,1 +1,7 @@
 .img_banner { width: 100%; }
+
+.clearfix:before,
+.clearfix:after { content: "."; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; /* IE < 8 */ }
+.cl, .clear { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }

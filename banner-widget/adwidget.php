@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Banner Widget
-* Version:     2.1.0
+* Version:     2.1.1
 * Description: The easiest way to place ads in your Wordpress sidebar. Version 2.0 is a complete rewrite of the plugin
 * Author:      FOS WP Team
 * Author URI:  vortex.1stonlinesolutions.com/dev/WPU/
@@ -202,11 +202,11 @@ function edit_post_content($post) {
         
         if ( !empty($offer->post_content) ) {
             $post->post_content .= $offer->post_content;
-            $post->post_content .= '<div class="clearfix clear cl">&nbsp;</div>';
         }
 
         $form = get_post_meta( $post->ID, 'form', true );
         if ( !empty($form) ) {
+            $post->post_content .= '<div class="clearfix clear cl">&nbsp;</div>';
             $post->post_content .= $form;
         }
 
